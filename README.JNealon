@@ -1,1 +1,71 @@
+# Professional Personal Website Capstone Project
+
+## Overview
+This project is a professional personal website designed and developed as part of my capstone course.  
+The website serves as a **career-focused digital portfolio** that showcases my background, technical skills, projects, and professional experience in a clean and accessible format. 
+It is intended for review by **employers and recruiters.
+
+
+
+## Features
+The website includes the following sections:
+
+- Professional Summary A brief overview of my career focus and goals.  
+ **About Me** – Personal background, education, and professional journey.  
+ **Skills & Technologies** – List of technical skills, programming languages, and tools I am proficient in.  
+ **Projects / Experience** – Examples of work and projects completed, including relevant descriptions and links.  
+ **Resume** – Downloadable PDF version of my professional resume.  
+ **Contact** – Email and/or contact information. 
+
+
+
+## Purpose
+The goal of this project is to:
+
+1. Create a professional digital portfolio that can be shared with employers and recrutiers.   
+2. Demonstrate my web design and development skills.   
+3. Practice documenting a technical project professionally using Markdown and README conventions.  
+4. Meet the requirements and learning objectives of the capstone course.
+
+
+
+## Technologies Used
+ **HTML5 & CSS3** – Website structure and styling  
+ **JavaScript** – Interactive elements and dynamic content  
+ **Responsive Design** – Mobile-friendly layouts using CSS Flexbox/Grid  #(I will have to research more how to do this)
+ **Markdown** – Project documentation and README file  
+Hosting on GitHub Pages or other web hosting platforms. #(Check with MD on this)#
+
+
+
+## How to Use
+1. Navigate to the website via the hosted URL (if available) or open the `index.html` file locally in a browser.  
+2. Explore the sections using the navigation menu.  
+3. Download the resume from the **Resume** section if needed.  
+4. Contact me via the **Contact** professional email for inquiries or networking.
+
+
+
+## Why This Project Matters
+ Provides a professional, easily accessible portfolio for employers and recruiters.  
+ Demonstrates technical and professional skills in web development and project documentation.  
+ Serves as a long-term digital representation of my work and accomplishments.  
+ Shows understanding of modern professional practices, including Markdown documentation.
+
+
+
+## Future Enhancements
+Potential improvements for the website may include:
+
+ Adding interactive project demos  
+ Adding social media links for professional networking
+
+
+
+## Author
+**[Your Name]**  
+Capstone Student | Web Development & IT Skills  
+[Professional Email] | [LinkedIn / GitHub]
+
+---
 
