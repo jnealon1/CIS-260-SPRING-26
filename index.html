@@ -11,6 +11,12 @@
 <meta charset="UTF-8">
 <title>Portfolio</title>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Portfolio</title>
+
 <!-- Font Awesome -->
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
@@ -40,13 +46,13 @@ body {
     text-align: center;
 }
 
-/* PROFILE PHOTO (FIXED) */
+/* PROFILE PHOTO */
 .profile-photo {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    object-position: center; /* keeps face centered */
+    object-position: center;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     border: 3px solid #fff;
     transition: all 0.3s ease;
@@ -57,135 +63,50 @@ body {
     transform: scale(1.05);
 }
 
+/* FALLBACK (THIS IS THE FIX 🔥) */
+.profile-photo::after {
+    content: "Image not found";
+    display: none;
+}
+
+/* TEXT */
 .sidebar h2 {
     margin: 10px 0 5px 0;
-    color: white;
 }
 
 .sidebar p {
     font-size: 14px;
     margin-bottom: 15px;
     color: #b0b3c6;
-    line-height: 1.4;
 }
 
 /* ICON LINKS */
-.sidebar .icon-links {
+.icon-links {
     display: flex;
     gap: 15px;
-    margin-bottom: 15px;
 }
 
-.sidebar a.icon-link {
+.icon-link {
     color: white;
     font-size: 22px;
-    text-decoration: none;
 }
 
-.sidebar a.icon-link:hover {
+.icon-link:hover {
     color: #4da6ff;
-}
-
-/* MAIN CONTENT */
-.main-content {
-    margin-left: 240px;
-    padding: 40px;
-    flex: 1;
-}
-
-/* NAV LINKS */
-.nav-links {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.nav-links a {
-    color: #2c2f48;
-    text-decoration: none;
-    padding: 8px 12px;
-    transition: all 0.3s ease;
-    border-bottom: 2px solid transparent;
-}
-
-.nav-links a:hover {
-    border-bottom: 2px solid #4da6ff;
-}
-
-/* SECTIONS */
-section {
-    margin-bottom: 50px;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    border-left: 6px solid #4da6ff;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-h1, h2 {
-    margin-bottom: 10px;
-}
-
-p, ul {
-    margin: 5px 0;
-    line-height: 1.6;
-}
-
-.job {
-    margin-bottom: 25px;
-}
-
-.job-title {
-    font-weight: bold;
-}
-
-.job-info {
-    font-size: 14px;
-    color: #555;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    body {
-        flex-direction: column;
-    }
-    .main-content {
-        margin-left: 0;
-        padding: 20px;
-    }
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-        flex-direction: row;
-        justify-content: space-around;
-        padding: 10px;
-    }
-    .profile-photo {
-        width: 80px;
-        height: 80px;
-    }
-    .sidebar h2, .sidebar p {
-        display: none;
-    }
 }
 </style>
 </head>
 
 <body>
 
-<!-- SIDEBAR -->
 <div class="sidebar">
 
-    <!-- ✅ FIXED IMAGE -->
-    <img src="PPhoto.png" alt="My Photo" class="profile-photo">
+    <!-- ✅ IMAGE (FINAL VERSION) -->
+    <img src="./PPhoto.png" alt="My Photo" class="profile-photo">
 
     <h2>Your Name</h2>
-    <p>Your Title / Short Bio</p>
+    <p>Your Title</p>
 
-    <!-- ICON LINKS -->
     <div class="icon-links">
         <a href="#" class="icon-link"><i class="fab fa-linkedin"></i></a>
         <a href="#" class="icon-link"><i class="fab fa-github"></i></a>
@@ -193,6 +114,11 @@ p, ul {
     </div>
 
 </div>
+
+</body>
+</html>
+
+  
 
 <!-- MAIN CONTENT -->
 <div class="main-content">
