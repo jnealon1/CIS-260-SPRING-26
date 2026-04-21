@@ -5,7 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jacquetta A. Nealon | Cybersecurity Portfolio</title>
 
-<!-- Font Awesome for icons -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Portfolio</title>
+
+<!-- Font Awesome -->
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 <style>
@@ -34,12 +40,13 @@ body {
     text-align: center;
 }
 
-/* SIDEBAR PROFILE PHOTO */
+/* PROFILE PHOTO (FIXED) */
 .profile-photo {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
+    object-position: center; /* keeps face centered */
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     border: 3px solid #fff;
     transition: all 0.3s ease;
@@ -156,7 +163,7 @@ p, ul {
         justify-content: space-around;
         padding: 10px;
     }
-    .sidebar img {
+    .profile-photo {
         width: 80px;
         height: 80px;
     }
@@ -171,24 +178,20 @@ p, ul {
 
 <!-- SIDEBAR -->
 <div class="sidebar">
-    <!-- PROFILE PHOTO -->
-    <img src="PPhoto.png" alt="My Photo">
 
-    <!-- NAME -->
-    <h2>Jacquetta A. Nealon</h2>
+    <!-- ✅ FIXED IMAGE -->
+    <img src="PPhoto.png" alt="My Photo" class="profile-photo">
 
-    <!-- PROFESSIONAL TITLE / CAPTION -->
-    <p>Cybersecurity Student | Information Security | Risk & Threat Analysis</p>
+    <h2>Your Name</h2>
+    <p>Your Title / Short Bio</p>
 
-    <!-- SOCIAL ICONS -->
+    <!-- ICON LINKS -->
     <div class="icon-links">
-        <a href="https://github.com/jnealon1" target="_blank" class="icon-link">
-            <i class="fab fa-github"></i>
-        </a>
-        <a href="mailto:jnealon1@gmail.com" class="icon-link">
-            <i class="fas fa-envelope"></i>
-        </a>
+        <a href="#" class="icon-link"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="icon-link"><i class="fab fa-github"></i></a>
+        <a href="#" class="icon-link"><i class="fas fa-envelope"></i></a>
     </div>
+
 </div>
 
 <!-- MAIN CONTENT -->
