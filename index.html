@@ -10,19 +10,24 @@
 
 <style>
 body {
+     {
+    font-family: "Segoe UI", Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    background: #f4f4f9;
     display: flex;
+    color: #333;
 }
 
 /* SIDEBAR */
 .sidebar {
-    width: 220px;
+    width: 240px;
     position: fixed;
     height: 100%;
-    background-color: #2c2f48;
+    background: #2c2f48;
     color: white;
     display: flex;
     flex-direction: column;
@@ -32,7 +37,7 @@ body {
 }
 
 .profile-photo {
-    width: 180px; /* increased */
+    width: 180px;
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
@@ -43,6 +48,271 @@ body {
 .profile-photo:hover {
     box-shadow: 0 0 25px #4da6ff;
     transform: scale(1.05);
+}
+    
+.sidebar h2 {
+    font-size: 20px;
+    margin: 10px 0 5px;
+}
+
+.sidebar p {
+    font-size: 14px;
+    color: #b0b3c6;
+}
+
+/* ICONS */
+.icon-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.icon-link {
+    color: white;
+    font-size: 18px;
+}
+
+.icon-link:hover {
+    color: #4da6ff;
+}
+
+
+/* RESUME */
+.resume-link {
+    margin-top: 10px;
+    color: #b0b3c6;
+    text-decoration: none;
+    font-size: 14px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.resume-link:hover {
+    color: #4da6ff;
+    border-bottom: 2px solid #4da6ff;
+}
+
+
+
+
+
+
+    
+/* MAIN */
+.main-content {
+    margin-left: 260px;
+    padding: 40px;
+    flex: 1;
+}
+
+/* NAV */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2c2f48;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 5px;
+}
+
+.nav-links a:hover {
+    border-bottom: 2px solid #4da6ff;
+}
+
+/* SECTIONS */
+section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #4da6ff;
+    border-radius: 6px;
+}
+
+/* HEADINGS + TEXT */
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+/* EXPERIENCE */
+.job {
+    margin-bottom: 18px;
+}
+
+.job-title {
+    font-weight: 700;
+}
+
+.job-company {
+    font-style: italic;
+    color: #444;
+}
+
+.job-info {
+    font-size: 13px;
+    color: #666;
+}
+
+.job ul {
+    margin-top: 6px;
+    padding-left: 18px;
+}
+
+/* CREDENTIALS */
+.cert-list {
+    list-style: none;
+    padding: 0;
+}
+
+.cert-list li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cert-list i {
+    color: #4da6ff;
+}
+
+/* CONTACT ICONS */
+#contact i {
+    margin-right: 8px;
+    color: #4da6ff;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    body { flex-direction: column; }
+    .sidebar { position: relative; width: 100%; height: auto; }
+    .main-content { margin-left: 0; }
+}
+
+</style>
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 240px;
+    position: fixed;
+    height: 100%;
+    background-color: #2c2f48;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
 }
 
 .sidebar h2 {
@@ -70,20 +340,6 @@ body {
     color: #4da6ff;
 }
 
-/* RESUME */
-.resume-link {
-    margin-top: 10px;
-    color: #b0b3c6;
-    text-decoration: none;
-    font-size: 14px;
-    border-bottom: 2px solid transparent;
-    transition: 0.3s;
-}
-
-.resume-link:hover {
-    color: #4da6ff;
-    border-bottom: 2px solid #4da6ff;
-}
 
 /* MAIN */
 .main-content {
