@@ -72,22 +72,31 @@ body {
     line-height: 1.4;
 }
 
-.icon-links {
-    display: flex;
-    gap: 12px;
-    margin-top: 10px;
-}
+/* ICON + RESUME HOVER EFFECT (BLUE GLOW LIKE PROFILE PICTURE) */
 
 .icon-link {
-    color: white;
-    font-size: 16px;
+    transition: 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.icon-link:hover {
+    transform: scale(1.15);
+    color: #4da6ff;
+    text-shadow: 0 0 12px rgba(77,166,255,0.7);
+}
+
+/* Resume link hover */
 .resume-link {
-    margin-top: 10px;
-    font-size: 12px;
-    color: #dcdcdc;
-    text-decoration: none;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.resume-link:hover {
+    color: #4da6ff;
+    transform: scale(1.05);
+    text-shadow: 0 0 12px rgba(77,166,255,0.7);
 }
 
 /* ================= MAIN CONTENT ================= */
