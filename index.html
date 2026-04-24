@@ -20,7 +20,7 @@ body {
     background: #f4f4f9;
 }
 
-/* ================= SIDEBAR ================= */
+/* ================= SIDEBAR (RESTORED) ================= */
 .sidebar {
     width: 200px;
     position: fixed;
@@ -30,20 +30,18 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 15px 10px;
+    padding: 20px 10px;
     text-align: center;
 }
 
-/* PROFILE PHOTO WITH HOVER EFFECT */
 .profile-photo {
     width: 140px;
     height: 140px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid white;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     transition: 0.3s ease;
-    cursor: pointer;
 }
 
 .profile-photo:hover {
@@ -54,41 +52,50 @@ body {
 
 .sidebar h2 {
     font-size: 15px;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 
+/* FOCUS AREAS (RESTORED) */
 .sidebar-section h2 {
     font-size: 12px;
-    border-bottom: 2px solid white;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
     width: 100%;
-    padding-bottom: 4px;
-    margin-top: 10px;
+    padding-bottom: 6px;
+    margin-top: 15px;
+    margin-bottom: 8px;
 }
 
 .sidebar-section ul {
     list-style: none;
-    font-size: 12px;
-    margin-top: 8px;
-    line-height: 1.4;
+    font-size: 11px;
+    line-height: 1.6;
 }
 
-/* ICON + RESUME HOVER EFFECT (BLUE GLOW LIKE PROFILE PICTURE) */
+/* ICONS */
+.icon-links {
+    display: flex;
+    gap: 14px;
+    margin-top: 12px;
+}
 
 .icon-link {
+    color: white;
+    font-size: 16px;
     transition: 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    text-decoration: none;
 }
 
 .icon-link:hover {
-    transform: scale(1.15);
+    transform: scale(1.2);
     color: #4da6ff;
-    text-shadow: 0 0 12px rgba(77,166,255,0.7);
 }
 
-/* Resume link hover */
+/* RESUME LINK (RESTORED) */
 .resume-link {
+    margin-top: 12px;
+    font-size: 12px;
+    color: #dcdcdc;
+    text-decoration: none;
     transition: 0.3s ease;
     display: inline-block;
 }
@@ -96,15 +103,15 @@ body {
 .resume-link:hover {
     color: #4da6ff;
     transform: scale(1.05);
-    text-shadow: 0 0 12px rgba(77,166,255,0.7);
 }
 
-/* ================= MAIN CONTENT ================= */
+/* MAIN CONTENT */
 .main-content {
     margin-left: 200px;
     width: 100%;
     padding: 25px;
     max-width: 1100px;
+    padding-bottom: 120px;
 }
 
 /* NAV */
@@ -112,8 +119,8 @@ body {
     display: flex;
     justify-content: center;
     gap: 25px;
-    margin-bottom: 20px;
-    padding: 12px;
+    margin-bottom: 25px;
+    padding: 10px;
     background: #2c2f48;
     border-radius: 10px;
 }
@@ -123,36 +130,104 @@ body {
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
+    position: relative;
+    padding-bottom: 4px;
 }
 
-.nav-links a:hover {
-    border-bottom: 2px solid #4da6ff;
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: #4da6ff;
+    transition: width 0.3s ease;
 }
 
-/* SECTIONS */
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* ================= SECTION HIERARCHY ================= */
 section {
     background: white;
-    padding: 20px;
-    margin-bottom: 18px;
-    border-radius: 10px;
+    padding: 26px;
+    margin-bottom: 26px;
+    border-radius: 12px;
     border-left: 4px solid #4da6ff;
+
+    opacity: 0;
+    transform: translateY(18px);
+    animation: fadeIn 0.7s ease forwards;
+
+    transition: 0.25s ease;
 }
 
-/* EXPERIENCE */
+section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+/* stagger */
+section:nth-of-type(1) { animation-delay: 0.05s; }
+section:nth-of-type(2) { animation-delay: 0.10s; }
+section:nth-of-type(3) { animation-delay: 0.15s; }
+section:nth-of-type(4) { animation-delay: 0.20s; }
+section:nth-of-type(5) { animation-delay: 0.25s; }
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* SECTION HEADERS */
+section h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #2c2f48;
+    margin-bottom: 12px;
+}
+
+/* ABOUT ME */
+#about p {
+    font-size: 15.5px;
+    line-height: 1.6;
+}
+
+/* EXPERIENCE EMPHASIS */
+#experience {
+    border-left: 6px solid #4da6ff;
+}
+
 .job-title { font-weight: 700; }
 .job-company { font-style: italic; font-size: 13px; }
 .job-info { font-size: 13px; margin-bottom: 5px; }
-.job ul { padding-left: 18px; }
 
-/* CREDENTIALS */
+.job ul {
+    padding-left: 18px;
+}
+
+/* ================= CREDENTIALS (CLEAN LIST - NO BADGES) ================= */
 .cert-list {
     list-style: none;
+    padding-left: 0;
 }
 
 .cert-list li {
     display: flex;
+    align-items: center;
     gap: 10px;
-    margin-bottom: 8px;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #2c2f48;
+    border-bottom: 1px solid rgba(44,47,72,0.12);
+}
+
+.cert-list li:last-child {
+    border-bottom: none;
 }
 
 .cert-list i {
@@ -166,15 +241,14 @@ section {
 }
 
 /* FOOTER */
-footer {
-    background: #2c2f48;
-    color: white;
+.site-footer {
     text-align: center;
-    padding: 15px;
-    position: fixed;
-    bottom: 0;
-    left: 200px;
-    width: calc(100% - 200px);
+    padding: 18px;
+    margin-top: 30px;
+    color: white;
+    background: #2c2f48;
+    border-radius: 10px;
+    font-size: 13px;
 }
 
 /* MOBILE */
@@ -191,11 +265,7 @@ footer {
 
     .main-content {
         margin-left: 0;
-    }
-
-    footer {
-        left: 0;
-        width: 100%;
+        padding-bottom: 80px;
     }
 }
 </style>
@@ -203,7 +273,7 @@ footer {
 
 <body>
 
-<!-- SIDEBAR ONLY -->
+<!-- SIDEBAR RESTORED -->
 <div class="sidebar">
 
     <img src="PPhoto.png" class="profile-photo">
@@ -228,7 +298,6 @@ footer {
     <a href="resume26.pdf" class="resume-link">⬇ Download Resume</a>
 </div>
 
-<!-- MAIN CONTENT -->
 <div class="main-content">
 
 <div class="nav-links">
@@ -309,37 +378,27 @@ footer {
 <!-- CREDENTIALS -->
 <section id="credentials">
 <h2>Credentials</h2>
+
 <ul class="cert-list">
     <li><i class="fas fa-shield-halved"></i> City Colleges of Chicago Advanced Cybersecurity Certification</li>
     <li><i class="fas fa-user-lock"></i> Google Cybersecurity Certification</li>
     <li><i class="fas fa-cloud"></i> Amazon AWS Cloud Certification</li>
 </ul>
+
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
 <h2>Contact</h2>
-
-<p>
-    <i class="fas fa-envelope"></i>
-    <a href="mailto:rubyrose1@gmail.com">rubyrose1@gmail.com</a>
-</p>
-
-<p>
-    <i class="fab fa-github"></i>
-    <a href="https://github.com/rubyrose1" target="_blank">
-        github.com/rubyrose1
-    </a>
-</p>
+<p><i class="fas fa-envelope"></i> <a href="mailto:jnealon1@gmail.com">jnealon1@gmail.com</a></p>
+<p><i class="fab fa-github"></i> <a href="https://github.com/jnealon1">github.com/jnealon1</a></p>
 </section>
+
+<footer class="site-footer">
+    Jacquetta A. Nealon © 2026
+</footer>
 
 </div>
 
 </body>
 </html>
-
-
-
-
-
 
