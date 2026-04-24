@@ -9,22 +9,22 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-body {
-     {
-    font-family: "Segoe UI", Arial, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
     background: #f4f4f9;
     display: flex;
     color: #333;
 }
 
-/* SIDEBAR */
+/* SIDEBAR (tightened) */
 .sidebar {
-    width: 240px;
+    width: 210px;              /* tighter */
     position: fixed;
     height: 100%;
     background: #2c2f48;
@@ -32,13 +32,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 15px;             /* reduced padding */
     text-align: center;
 }
 
 .profile-photo {
-    width: 180px;
-    height: 180px;
+    width: 140px;              /* smaller */
+    height: 140px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid white;
@@ -49,21 +49,33 @@ body {
     box-shadow: 0 0 25px #4da6ff;
     transform: scale(1.05);
 }
-    
+
 .sidebar h2 {
-    font-size: 20px;
+    font-size: 18px;
     margin: 10px 0 5px;
 }
 
-.sidebar p {
-    font-size: 14px;
-    color: #b0b3c6;
+/* Focus Areas underline */
+.sidebar-section h2 {
+    font-size: 16px;
+    margin-top: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid white;  /* WHITE UNDERLINE */
+    width: 100%;
+}
+
+.sidebar-section ul {
+    list-style: none;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #d0d3e2;
+    line-height: 1.4;
 }
 
 /* ICONS */
 .icon-links {
     display: flex;
-    gap: 15px;
+    gap: 12px;
     margin-top: 10px;
 }
 
@@ -76,13 +88,12 @@ body {
     color: #4da6ff;
 }
 
-
 /* RESUME */
 .resume-link {
     margin-top: 10px;
     color: #b0b3c6;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 13px;
     border-bottom: 2px solid transparent;
     transition: 0.3s;
 }
@@ -92,12 +103,119 @@ body {
     border-bottom: 2px solid #4da6ff;
 }
 
+/* MAIN */
+.main-content {
+    margin-left: 230px;
+    padding: 40px;
+    flex: 1;
+}
+
+/* NAV */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2c2f48;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 5px;
+}
+
+.nav-links a:hover {
+    border-bottom: 2px solid #4da6ff;
+}
+
+/* SECTIONS */
+section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #4da6ff;
+    border-radius: 6px;
+}
+
+/* EXPERIENCE */
+.job {
+    margin-bottom: 18px;
+}
+
+.job-title { font-weight: 700; }
+.job-company { font-style: italic; color: #444; }
+.job-info { font-size: 13px; color: #666; }
+
+.job ul {
+    margin-top: 6px;
+    padding-left: 18px;
+}
+
+/* CREDENTIALS */
+.cert-list {
+    list-style: none;
+}
+
+.cert-list li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cert-list i {
+    color: #4da6ff;
+}
+
+/* CONTACT */
+#contact i {
+    margin-right: 8px;
+    color: #4da6ff;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    body { flex-direction: column; }
+    .sidebar { position: relative; width: 100%; }
+    .main-content { margin-left: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <img src="PPhoto.png" class="profile-photo">
+
+    <h2>Jacquetta A. Nealon</h2>
+
+    <div class="sidebar-section">
+        <h2>Focus Areas</h2>
+        <ul>
+            <li>Cybersecurity Fundamentals</li>
+            <li>Threat Detection & Monitoring</li>
+            <li>System Security & Risk Awareness</li>
+            <li>Cloud & Infrastructure Concepts</li>
+        </ul>
+    </div>
+
+    <div class="icon-links">
+        <a href="https://github.com/jnealon1" class="icon-link">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:jnealon1@gmail.com" class="icon-link">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+
+    <a href="resume26.pdf" download class="resume-link">
+        ⬇ Download Resume
+    </a>
+</div>
 
 
-
-
-
-    
 /* MAIN */
 .main-content {
     margin-left: 260px;
